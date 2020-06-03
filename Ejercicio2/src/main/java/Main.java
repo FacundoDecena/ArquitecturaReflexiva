@@ -7,15 +7,15 @@ public class Main {
         String wantedClass;
         System.out.println("Ingrese una clase");
         wantedClass = input.nextLine();
-
+        input.close();
         try {
             Class<?> c = Class.forName(wantedClass);
             System.out.println(c);
 
             Field[] publicFields = c.getFields();
-            for (Field field:publicFields) {
+            for (Field field : publicFields) {
                 String fieldName = field.getName();
-                Class<?> typeClass = field.getClass();
+                Class<?> typeClass = field.getType();
                 System.out.println("Field: " + fieldName + " of type " + typeClass.getName());
             }
 
@@ -30,4 +30,9 @@ public class Main {
 class objetoRandom {
     public String field1;
     public int field2;
+}
+
+class small {
+    public int field2_1;
+    public float field2_2;
 }
