@@ -29,7 +29,7 @@ public class Main {
 
 class objetoRandom {
     public String field1;
-    public int field2;
+    public small field2;
 }
 
 class small {
